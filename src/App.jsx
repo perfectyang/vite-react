@@ -1,14 +1,16 @@
 import React from 'react'
-import Home from './page/Home/index.jsx'
-import About from './page/About/index.jsx'
-function App() {
+import ViewRouter from './router'
+import {withRouter} from 'react-router-dom'
+// import { connect } from 'react-redux'
+function App(props) {
   return (
-    <>
-    <h1>aaa</h1>
-    <Home />
-    <About />
-    </>
+    <ViewRouter {...props} />
   )
 }
-
-export default App
+export default withRouter(App)
+// export default connect(state => ({
+//   loginInfo: state.Login
+// }), dispatch => ({
+//   goLogin: bool => (dispatch({type: 'update', payload: {isLogin: bool}})),
+//   loginOut: bool => (dispatch({type: 'deleteInfo', payload: {isLogin: bool}})),
+// }))()
