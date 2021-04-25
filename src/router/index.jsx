@@ -5,13 +5,13 @@ import { Spin } from 'antd'
 const Layout = lazy(_ => import('../component/Layout'))
 const router = [
   {
-    path: '/admin/home',
+    path: '/home',
     component: lazy(_ => import('../page/Home')),
     title: 'home',
     isAuth: true
   },
   {
-    path: '/admin/about',
+    path: '/about',
     component: lazy(_ => import('../page/About')),
     title: 'about',
     isAuth: true
@@ -39,8 +39,6 @@ function AuthRouter (props) {
   }
 }
 
-// <Redirect exact path="/" to="/home" />
-
 function ViewRouter (props) {
   return (
     <Switch>
@@ -53,7 +51,7 @@ function ViewRouter (props) {
             }  />
           })
         }
-        <Route path="/admin">
+        <Route path="/">
           <Layout {...props}>
             {
               router.map(route => {
@@ -61,6 +59,7 @@ function ViewRouter (props) {
               })
             }
           </Layout>
+          <Redirect to="/home" />
         </Route>
       </Suspense>
     </Switch>

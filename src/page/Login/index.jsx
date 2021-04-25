@@ -42,12 +42,12 @@ const NormalLoginForm = (props) => {
 }
 function Login (props) {
   if (props.login.isLogin) {
-    return <Redirect to="/admin/home" />
+    return <Redirect to="/home" />
   } else {
     return (
       <div className="login-pages">
         <div className="login-pages__content">
-          <h1 className="h-title">EZ-talk</h1>
+          <h1 className="h-title">EZ-Talk</h1>
           <NormalLoginForm {...props} />
         </div>
       </div>

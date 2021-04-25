@@ -11,12 +11,12 @@ class LayoutComponent extends Component {
   NavList = [
     {
       title: 'Home',
-      link: '/admin/home',
+      link: '/home',
       key: 'home'
     },
     {
       title: 'About',
-      link: '/admin/about',
+      link: '/about',
       key: 'about'
     }
   ]
