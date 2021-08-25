@@ -59,7 +59,6 @@ function ViewRouter (props) {
               })
             }
           </Layout>
-          <Redirect to="/home" />
         </Route>
       </Suspense>
     </Switch>
